@@ -1,12 +1,14 @@
 import React, {useState} from 'react'
 
-export const ShoppingInput = () => {
+export const ShoppingInput = ({setItem}) => {
 const [text, setText] = useState('');
 
-const handleChange = e => setItem(e.target.value);
+const handleChange = e => setText(e.target.value);
 
 const handleSubmit = (e) => {
-  e.prevetDefault();
+  e.preventDefault();
+  setItem((oldState) => [...oldState, {text, id: crypto.randomUUID()}])
+  setText('')
 
 }
 
