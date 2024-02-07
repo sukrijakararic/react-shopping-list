@@ -11,6 +11,11 @@ form {
 h1 {
   font-family: "open sans",serif;
   margin-top: 13rem;
+  background-color: lightblue;
+  margin: 12rem 15rem 0 15rem;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 1rem;
 }
 
 input {
@@ -32,6 +37,7 @@ ul {
   border: 1px solid black;
   margin: 0 15rem;
   background-color: beige;
+  border-radius: 5px;
 }
 li {
   margin: 1rem 0;
@@ -40,4 +46,12 @@ li {
   border: 1px solid black;
   padding: 1rem;
   border-radius: 1rem;
+  background-color: antiquewhite;
+}
+form {
+  background-color: beige;
+  margin: 0 15rem;
+  padding: 1rem;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
