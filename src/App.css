@@ -58,3 +58,7 @@ form {
 span {
   text-align: end;
 }
+
+svg {
+  height: 1.5rem;
+}
