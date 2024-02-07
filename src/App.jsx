@@ -2,11 +2,11 @@ import React, {useState} from 'react'
 import './App.css'
 import { Header } from './components/header'
 import { ShoppingInput } from './components/ShoppingInput'
-import { List } from './components/List'
+import { ListItem } from './components/ListItem'
 
 function App() {
 
-    const [item, setItem] = useState([])
+    const [items, setItem] = useState([])
 
 
   return (
@@ -16,7 +16,7 @@ function App() {
     <ShoppingInput setItem={setItem} />
     
     <ul>
-      {item.map((stuff) => ( <List stuff={stuff} key={stuff.id} />))}
+      {items.map((item) => {return <ListItem item={item} key={item.id}  />})}
     </ul>
   
 

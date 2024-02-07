@@ -7,8 +7,8 @@ const handleChange = e => setText(e.target.value);
 
 const handleSubmit = (e) => {
   e.preventDefault();
-  setItem((oldState) => [...oldState, {text, id: crypto.randomUUID()}])
-  setText('')
+  setItem((oldState) => [...oldState, {text, done: false, id: crypto.randomUUID()}]);
+  setText('');
 
 }
 
