@@ -42,7 +42,7 @@ ul {
 li {
   margin: 1rem 0;
   font-family: "protest riot",serif;
-  text-align: start;
+  text-align: center;
   border: 1px solid black;
   padding: 1rem;
   border-radius: 1rem;
@@ -54,9 +54,6 @@ form {
   padding: 1rem;
   border-left: 1px solid black;
   border-right: 1px solid black;
-}
-span {
-  text-align: end;
 }
 
 svg {
