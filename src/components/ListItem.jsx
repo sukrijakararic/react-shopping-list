@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 
 export const ListItem = ({ item }) => {
-const [done,setDone] = useState();
+const [finshed,setFinished] = useState();
 
 
 
   const handleClick = () => {
-    setDone(!item.done)
+    setFinished(!item.done)
     document.getElementById("svg").style.color = "green"
   };
 
@@ -14,7 +14,7 @@ const [done,setDone] = useState();
     <li>
       {item.text}
       {!item.done ? (
-        <button onClick={handleClick} id="btn" className="btn" value={done}>
+        <button onClick={handleClick} id="btn" className="btn" value={finshed}>
           <svg
             id="svg"
             xmlns="http://www.w3.org/2000/svg"
