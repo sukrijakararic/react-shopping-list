@@ -1,21 +1,19 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 export const ListItem = ({ item }) => {
-const [finshed,setFinished] = useState();
-
-
+  const [finished, setFinished] = useState(item.done);
 
   const handleClick = () => {
-    setFinished(!item.done)
-    document.getElementById("svg").style.color = "green"
+    setFinished(!finished);
   };
 
   return (
     <li>
       {item.text}
       {!item.done ? (
-        <button onClick={handleClick} id="btn" className="btn" value={finshed}>
+        <button onClick={handleClick} id="btn" className="btn" value={finished}>
           <svg
+            style={finished ? { color: "green" } : { color: "black" }}
             id="svg"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
