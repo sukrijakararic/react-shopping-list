@@ -1,7 +1,7 @@
 * {
   text-align: center;
   box-sizing: border-box;
-  margin: 0 auto;
+  
 }
 
 form {
@@ -47,6 +47,7 @@ li {
   padding: 1rem;
   border-radius: 1rem;
   background-color: antiquewhite;
+  word-wrap: break-word;
 }
 form {
   background-color: beige;
@@ -60,8 +61,16 @@ svg {
   height: 1.5rem;
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    margin: auto;
+@media only screen and (max-width: 780px) {
+  h1 {
+    margin: 12rem 1rem 0 1rem;
+  }
+
+  ul {
+    margin: 0 1rem;
+  }
+
+  form {
+    margin: 0 1rem;
   }
 }
