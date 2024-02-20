@@ -5,13 +5,15 @@ export const ShoppingInput = ({ setItem }) => {
 
   const handleChange = (e) => setText(e.target.value); // This function will change the state of text of whatever is written
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setItem((oldState) => [
-      ...oldState,
-      { text, done: false, id: crypto.randomUUID() },
+  const handleSubmit = (e) => { // This function will add a new object into the items array in the app component everytime we submit the form
+    e.preventDefault(); // stop the page from refreshing when reloading
+    setItem((oldState) => [ // set item will take the current Item state from App.jsx and then (below)
+      ...oldState, /* it wil copy the old state and add the new item object below to that old state which will update the array everytime a new shopping list item is created so 
+                    the array keeps changing yet it keeps all its previous items*/
+      { text, done: false, id: crypto.randomUUID() }, /* when a new item is created, its created into an object with the following values. text is the text state, and done is 
+                                                      is responsible for the done button. When the button is clicked, it will change the value to true */
     ]);
-    setText("");
+    setText(""); // after all the logic has fired off, this will set the input text back to empty
   };
 
   return (
@@ -21,8 +23,8 @@ export const ShoppingInput = ({ setItem }) => {
       <input
         type="text"
         placeholder="What do you need to buy?"
-        value={text}
-        onChange={handleChange}
+        value={text} // this value is consistent with the text state so it ties this input to the state
+        onChange={handleChange} // everytime the text input changes, it fires off this callback function.
       />
       <button type="submit" className="btn">
         🛒
