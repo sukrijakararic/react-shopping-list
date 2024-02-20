@@ -28,6 +28,6 @@ The cart item object property changes to true.
 
 ![chicken](image-7.png)
 
-### There you have it, the only shopping list you'll ever need :happy:
+### There you have it, the only shopping list you'll ever need 😁
 
 
