@@ -4,13 +4,13 @@ Need something to keep track of your cart items while you shop? **Look no furthe
 
 I built this app to practice using the state hook. I started very basic with just displaying the cart items and as I became more comfortable, I made it a bit more *complex* by adding logic to buttons that change the propery of the cart item object propery which indicate if the item has been checked or not.
 
-![item with uncliecked button](image-1.png)     ![false done property](image-2.png)
+![item with uncliecked button](image-1.png)   ![false done property](image-2.png)
 
 As you can see, the button that is not clicked shows as a default check and a done property of false.
 
 However, when you click the button, 
 
-![item with clicked button](image-3.png)       ![true done property](image-4.png)
+![item with clicked button](image-3.png)   ![true done property](image-4.png)
 
 The cart item object property changes to true.
 
