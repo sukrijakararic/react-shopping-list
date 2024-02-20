@@ -19,12 +19,12 @@ export const ShoppingInput = ({ setItem }) => {
   return (
     <form onSubmit={handleSubmit}>
       
-        {/*The value of the input is text so that its tied together and the onChange just calls the handleChange function. onChange fires everytime the input changes */}
+        {/*The value of the input is text so that its tied together and the onChange just calls the handleChange function. onChange fires everytime the text input changes */}
       <input
         type="text"
         placeholder="What do you need to buy?"
-        value={text} // this value is consistent with the text state so it ties this input to the state
-        onChange={handleChange} // everytime the text input changes, it fires off this callback function.
+        value={text}
+        onChange={handleChange}
       />
       <button type="submit" className="btn">
         🛒
