@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 
-export const ListItem = ({ item }) => {
-  const [finished, setFinished] = useState(item.done);
+export const ListItem = ({ item }) => { // we use destructuring to import the item from items array to this component
+  const [finished, setFinished] = useState(item.done);// Here we call useState hook to keep track of the state of the done propery in the item object. It is defualted to false
 
-  const handleClick = () => {
-    setFinished(!finished);
+  const handleClick = () => { // This function will be called to change the item.done to true when the button is clicked.
+    setFinished(!finished); // as you can see, we use the setFinished function to invert the finished state(item.done)
   };
 
   return (
     <li>
-      {item.text}
-      {!item.done ? (
-        <button onClick={handleClick} id="btn" className="btn" value={finished}>
+      {item.text} {/* This will print the individual item's text property which is set in the ShoppingInput component */}
+      {!item.done ? ( // This will display the item.done's button. Basically stating that if the done is true, then show the button
+        <button onClick={handleClick} id="btn" className="btn" value={finished}> {/* The value here is set to the finished state which ties them together */}
           <svg
-            style={finished ? { color: "green" } : { color: "black" }}
+            style={finished ? { color: "green" } : { color: "black" }} // This right here while change the style of the button depending on it's state.
             id="svg"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
